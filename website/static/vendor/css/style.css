@@ -1,0 +1,118 @@
+/* 
+Dark 9013FE
+Light BD10E0
+*/
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+label {
+    color: #ffffff;
+}
+.navbar {
+    background: #fff;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.08);
+    padding-left: 25px;
+	padding-right: 25px;
+	transition: ease .3s;
+	height: 70px;
+}
+.navbar li {
+	padding: 0 25px;
+	z-index: 4;
+}
+.navbar li a {
+	padding: 35px 0;
+	font-weight: 600;
+	font-size: 12px;
+	color: #a29991;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: block;
+	position: relative;
+	z-index: 5;
+    text-decoration: none;
+}
+.navbar.scrolled li a {
+	color: #0e1214;
+}
+.bg-primary {
+    background-color: unset !important;
+}
+.h1-head {
+    margin-top: unset !important;
+}
+.text-h3.mt-3 {
+	font-size: 1.2rem;
+}
+.text-h3.quote{
+    font-style: italic;
+}
+.btn {
+	height: 50px;
+	font-size: 15px;
+	padding: 4px 25px 2px;
+	text-align: center;
+	border: none;
+	display: flex;
+	/* align-items: center; */
+	cursor: pointer;
+	transition: ease .3s;
+	min-width: 200px;
+	/* max-width: -moz-max-content; */
+	/* max-width: -webkit-max-content; */
+	max-width: max-content;
+	border-radius: 0;
+	/* border-radius: 0; */
+	position: relative;
+	color: #ffffff;
+	font-weight: 700;
+}
+.btn span {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.btn.btn-primary {
+	background-color: #004d50;
+	color: #ffffff;
+	border-color: #004d50;
+}
+.btn.btn-white {
+	background-color: #ffffff;
+	color: #004d50;
+}
+.hero .btn-container .btn {
+	margin-right: 20px;
+}
+.btn.btn-white svg .fill-color {
+	fill: #004d50;
+}
+.btn.btn-primary.btn-topnav {
+    min-width: 130px;
+}
+.btn.btn-primary.btn-lg.btn-contact {
+	height: 50px;
+	font-size: 15px;
+	padding: 15px 25px 2px;
+	text-align: center;
+	border: none;
+	display: flex;
+	/* align-items: center; */
+	cursor: pointer;
+	transition: ease .3s;
+	min-width: 90px;
+	/* max-width: -moz-max-content; */
+	/* max-width: -webkit-max-content; */
+	max-width: max-content;
+	border-radius: 0;
+	/* border-radius: 0; */
+	position: relative;
+	color: #ffffff;
+	font-weight: 700;
+}
