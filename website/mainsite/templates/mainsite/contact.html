@@ -1,0 +1,53 @@
+<section class="pb-5 pt-5 bg-dark text-light" id="contact" style="">
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-12 col-md-8 col-lg-7">
+        <h3 class="fw-bold display-4 text-white">Kontakt os</h3>
+        <h4 class="display-5 text-white">Vi glæder os til at høre fra dig</h4>
+      </div>
+    </div>
+    <div class="row pt-4">
+      <div class="col-12">
+        <form action="" method="POST">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          <div class="row">
+            <div class="col-16 col-md">
+              {{ form.name.errors }}
+              {{ form.name }}
+            </div>
+            <div class="col-16 col-md mt-4 mt-md-0">
+              {{ form.from_email.errors }}
+              {{ form.from_email }}
+            </div>
+            <div class="col-16 col-md mt-4 mt-md-0">
+              {{ form.phone.errors }}
+              {{ form.phone }}
+            </div>
+            <div class="col-16 col-md mt-4 mt-md-0">
+              {{ form.company.errors }}
+              {{ form.company }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+              {{ form.subject.errors }}
+              {{ form.subject }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+              {{ form.message.errors }}
+              {{ form.message }}
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col text-center">
+              <button type="submit" class="btn btn-primary btn-lg btn-contact">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

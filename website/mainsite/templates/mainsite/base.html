@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Xperta - Open Source solutions</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'img/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <!-- Plugins -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" title="Xperta" rel="home" style="outline: currentcolor none medium;">
+                <img src="{% static 'img/logo.svg' %}" alt="" title="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mx-auto justify-content-center" id="navbarNavDropdown">
+                <nav>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services" title="Services">Services</a>
+                        </li>
+                        <!-- <li class="">
+                            <a href="/hosting/" title="Hosting services">Hosting</a>
+                            </li>
+                        <li class="">
+                        <a href="/da/artikler/" title="Se vores artikler">Artikler</a>
+                        </li> 
+                        <li class="">
+                        <a href="/da/om/" title="Se om os">Om</a>
+                        </li> -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="collapse nav-btn-container d-flex d-none d-lg-block justify-content-end">
+                <a href="#contact" target="_self" title="" class="btn btn-primary btn-topnav"><span>Kontakt os</span></a>
+            </div>
+        </div>
+    </nav>
+    {% if messages %}
+      {% for message in messages %}
+        {% if message.tags %}
+        {% endif %}
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}{% endif %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+      {% endfor %}
+    {% endif %}
+    
+    {% block content %}
+    {% endblock content %}
+    <section class="pt-5 pb-5 bg-dark text-white">
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 text-center text-md-start">
+              <p>Copyright ©{% now 'Y' %} Xperta. All rights reserved.</p>
+            </div>
+            <div class="col-md text-center text-md mb-6">
+              <p>Email: teisangel@tsrv.pw</p>
+            </div>
+            <div class="col-md text-center text-md mb-6">
+              <p>Telefon: +45 26 37 27 62</p>
+            </div>
+            <div class="col-md text-center text-md-end mb-6">
+              <a href="#" class="m-2">
+                <i class="fab fa-twitter fa-lg text-white"
+                  aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

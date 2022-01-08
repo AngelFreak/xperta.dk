@@ -1,0 +1,51 @@
+# pull the official base image
+FROM python:3.8-alpine AS python-base
+
+# create working dir
+RUN mkdir /build
+
+# set work directory
+WORKDIR /build
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install dependencies
+RUN pip install --upgrade pip 
+COPY website/requirements.txt /build
+RUN pip install --no-cache-dir -r requirements.txt
+
+
+# use build base image
+FROM python-base AS app
+
+# create app folder for  application
+RUN mkdir /app
+# create satticfiles for django collectstatic, to fix permission issues
+RUN mkdir /app/staticfiles
+
+# copy project
+COPY website /app
+WORKDIR /app
+
+# django collect static files
+RUN python manage.py collectstatic -v 2 --noinput
+
+# create the app user
+RUN addgroup -S app && adduser -S app -G app
+
+# set correct permissions
+RUN chown -R app:app /app
+
+# change to the app user
+USER app
+
+# port the service is running on
+EXPOSE 8000
+
+# change to the app user
+USER app
+
+# run entrypoint.sh
+ENTRYPOINT ["/app/entrypoint-prod.sh"]

@@ -1,14 +1,20 @@
 /* 
-Dark 9013FE
-Light BD10E0
+Primary: 
+#6a2c70
+#ffffff
+#8d3a95
+Secoundary:
+#471e4b
+#e6e6e6
+#ae4ab8
 */
 
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-style: normal;
 }
-label {
-    color: #ffffff;
+.text-primary {
+	color: #6a2c70 !important;
 }
 .navbar {
     background: #fff;
@@ -17,14 +23,13 @@ label {
     padding-left: 25px;
 	padding-right: 25px;
 	transition: ease .3s;
-	height: 70px;
+	min-height: 70px;
 }
 .navbar li {
 	padding: 0 25px;
 	z-index: 4;
 }
 .navbar li a {
-	padding: 35px 0;
 	font-weight: 600;
 	font-size: 12px;
 	color: #a29991;
@@ -38,11 +43,34 @@ label {
 .navbar.scrolled li a {
 	color: #0e1214;
 }
+.navbar-brand img {
+	width: auto;
+	height: auto;
+	max-height: 35px;
+}
+.navbar .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(71, 30, 75, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+.alert {
+	margin-top: 70px;
+	margin-bottom: 0;
+	border-radius: 0;
+}
+.hero {
+	color: #fffefe;
+}
+.hero .btn-container .btn {
+	margin-right: 20px;
+}
 .bg-primary {
     background-color: unset !important;
 }
 .h1-head {
     margin-top: unset !important;
+	text-shadow: 0px 1px 0px rgba(53, 53, 53, 0.4);
+}
+.lead p {
+	text-shadow: 0px 0.5px 0px rgba(53, 53, 53, 0.4);
 }
 .text-h3.mt-3 {
 	font-size: 1.2rem;
@@ -79,19 +107,16 @@ label {
 	justify-content: space-between;
 }
 .btn.btn-primary {
-	background-color: #004d50;
+	background-color: #471e4b;
 	color: #ffffff;
-	border-color: #004d50;
+	border-color: #471e4b;
 }
 .btn.btn-white {
 	background-color: #ffffff;
-	color: #004d50;
-}
-.hero .btn-container .btn {
-	margin-right: 20px;
+	color: #471e4b;
 }
 .btn.btn-white svg .fill-color {
-	fill: #004d50;
+	fill:#471e4b;
 }
 .btn.btn-primary.btn-topnav {
     min-width: 130px;
