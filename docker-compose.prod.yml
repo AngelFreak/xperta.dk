@@ -1,5 +1,40 @@
 version: '3.7'
 services:
+  traefik:
+    image: traefik:v2.5
+    container_name: xperta_prod_traefik
+    command:
+      #- --log.level=DEBUG
+      - --api
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.le.acme.tlschallenge=true
+      - --certificatesresolvers.le.acme.email=teisangel@tsrv.pw
+      - --certificatesresolvers.le.acme.storage=/letsencrypt/acme.json
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080
+    volumes:
+      - ./letsencrypt:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)
+      - traefik.http.routers.http-catchall.entrypoints=web
+      - traefik.http.routers.http-catchall.middlewares=redirect-to-https
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true
+      
+      - traefik.http.routers.traefik.rule=Host(`proxy.xperta.dk`)
+      - traefik.http.routers.traefik.entrypoints=websecure
+      - traefik.http.routers.traefik.tls.certresolver=le
+      - traefik.http.routers.traefik.service=api@internal
+      - traefik.http.routers.traefik.middlewares=auth
+      - traefik.http.middlewares.auth.basicauth.users=admin:$$apr1$$1Ea90fd5$$.Kiki8eF/qyBkJLwN74Y21
+
   nginx:
     container_name: xperta_prod_web
     restart: on-failure
@@ -11,6 +46,12 @@ services:
       - 5000:80
     depends_on:
       - web
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.xperta.rule=Host(`xperta.dk`)
+      - traefik.http.routers.xperta.entrypoints=websecure
+      - traefik.http.routers.xperta.tls.certresolver=le
+
   web:
     container_name: xperta_prod_backend
     build:
@@ -20,7 +61,7 @@ services:
     volumes:
       - static_volume:/app/staticfiles
     env_file:
-      - ./website/.prod.env
+      - .env.prod
 
 volumes:
   static_volume:
