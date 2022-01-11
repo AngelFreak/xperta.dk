@@ -29,9 +29,6 @@ RUN mkdir /app/staticfiles
 COPY website /app
 WORKDIR /app
 
-# django collect static files
-RUN python manage.py collectstatic -v 2 --noinput
-
 # create the app user
 RUN addgroup -S app && adduser -S app -G app
 
