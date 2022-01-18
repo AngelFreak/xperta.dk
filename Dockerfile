@@ -16,9 +16,6 @@ RUN pip install --upgrade pip
 COPY website/requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
-# copy project
-COPY website /app
-
 EXPOSE 8000
 
 # run entrypoint.sh
