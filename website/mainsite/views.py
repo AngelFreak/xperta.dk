@@ -31,5 +31,8 @@ def successView(request):
     messages.info(request, 'Mange tak for din besked. Vi vender tilbage så hurtigt som muligt!')
     return HttpResponseRedirect("mainsite/index.html")
 
+def services(request):
+    return render(request, 'mainsite/services.html')
+
 def about(request):
     return render(request, 'mainsite/about.html')

@@ -1,0 +1,114 @@
+{% extends "mainsite/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="pt-5 pb-3 align-items-bottom bg-primary hero d-flex"
+style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity)); background-image: url({% static 'img/nasa_globe-min.jpg' %}); background-repeat: no-repeat; background-position: center; !important;">
+    <div class="row d-flex flex-column align-items-center align-self-center mx-auto text-center">
+        <h1 class="display-3 fw-bold h1-head"><strong>Vi tilbyder</strong></h1>
+        <p class="lead mb-6 hero hero-sub">Altid god service, veldokumenterede, og stabile løsninger.</p>
+    </div>
+</section>
+<section class="pt-5 pb-5 bg-light">
+    <div class="container px-4 py-5 text-center">
+        <div class="row mb-md-4">
+            <div class="col-12 col-lg-8 mx-auto">
+                <h2 class="mx-auto text-center">Services</h2>
+                <p class="lead mb-6 text-center">Vi kan levere det meste, men her er et udvalg af services vi tilbyder vores kunder.</p>
+            </div>
+        </div>
+    <div class="row d-flex mb-5">
+        <div class="col-10 mx-auto col-md-4 d-flex">
+            <div class="my-3 card card-body shadow p-4">
+                <div class="icon-wrap text-primary my-3">
+                    <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fas fa-user-friends fa-lg"></i>
+                </div>
+                <div class="row align-items-center d-flex text-md-center text-lg-start">
+                    <h4 class="text-center mx-auto">
+                    Rådgivning
+                    </h4>
+                    <p class="text-center mx-auto">
+                    Passionerede IT konsulenter på timebasis, eller freelance.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto col-md-4 d-flex">
+            <div class="my-3 card card-body shadow p-4">
+                <div class="icon-wrap text-primary my-3">
+                    <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fas fa-server fa-lg"></i>
+                </div>
+                <div class="row align-items-center d-flex text-md-center text-lg-start">
+                    <h4 class="text-center mx-auto">
+                    Hosting
+                    </h4>
+                    <p class="text-center mx-auto">
+                    Tryg kvalitets hosting, med gode svartider.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto col-md-4 d-flex">
+            <div class="my-3 card card-body shadow p-4">
+                <div class="icon-wrap text-primary my-3">
+                    <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fas fa-wifi fa-lg"></i>
+                </div>
+                <div class="row align-items-center d-flex text-md-center text-lg-start">
+                    <h4 class="text-center mx-auto">
+                    Infrastruktur
+                    </h4>
+                    <p class="text-center mx-auto">
+                    Netværk, WiFi, storage, virtualisering, kubernetes, vi har hele stakken.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto col-md-4 d-flex">
+            <div class="my-3 card card-body shadow p-4">
+                <div class="icon-wrap text-primary my-3">
+                    <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-th fa-lg"></i>
+                </div>
+                <div class="row align-items-center d-flex text-md-center text-lg-start">
+                    <h4 class="text-center mx-auto">
+                    Air-gapped
+                    </h4>
+                    <p class="text-center mx-auto">
+                    Ingen internet forbindelse? Intet problem!
+                    Dette er en af vores spidskompetencer.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto col-md-4 d-flex">
+            <div class="my-3 card card-body shadow p-4">
+                <div class="icon-wrap text-primary my-3">
+                    <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-lock fa-lg"></i>
+                </div>
+                <div class="row align-items-center d-flex text-md-center text-lg-start">
+                    <h4 class="text-center mx-auto">
+                    Sikkerhed
+                    </h4>
+                    <p class="text-center mx-auto">
+                    Mange års erfaring med sikre miljøer.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto col-md-4 d-flex">
+            <div class="my-3 card card-body shadow p-4">
+                <div class="icon-wrap text-primary my-3">
+                    <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-toolbox fa-lg"></i>
+                </div>
+                <div class="row align-items-center d-flex text-md-center text-lg-start">
+                    <h4 class="text-center mx-auto">
+                    Drift
+                    </h4>
+                    <p class="text-center mx-auto">
+                    Vi håndtere driften, på timebasis, eller på en servicekontrakt for fuld tryghed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
