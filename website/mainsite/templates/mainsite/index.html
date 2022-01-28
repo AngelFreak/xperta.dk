@@ -3,10 +3,9 @@
 
 {% block content %}
 <section class="pt-5 pb-3 mt-0 align-items-bottom d-flex bg-primary hero hero"
-style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity)); background: url(https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80) no-repeat bottom center !important;">
+style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity)); background-image: url({% static 'img/antenna_array-min.jpg' %}); background-repeat: no-repeat; background-position: bottom center; !important;">
 <div class="container">
-  <div
-    class="row justify-content-start align-items-center d-flex h-100 ">
+  <div class="row justify-content-start align-items-center d-flex h-100 ">
     <div class="col-12 col-md-6">
       <label>Værdiskabende IT-løsninger</label>
       <h1 class="display-4 mb-2 mt-5 h1-head hero"><strong>Open source, </br>IT-løsninger der skaber værdi for jer!</strong> </h1>
@@ -20,7 +19,8 @@ style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs
               </span>
           </a>
           <a class="btn btn-white" href="#contact" target="_self" title="Kontakt os">
-              <span>Kontakt os<svg xmlns="http://www.w3.org/2000/svg" width="25.5" height="12" viewBox="0 0 51 24">
+              <span>Kontakt os
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25.5" height="12" viewBox="0 0 51 24">
                       <path class="fill-color" fill-rule="evenodd" fill="#ffffff" d="M2287.81,3788.99l-2.04,2.02,8.68,8.56h-45.46v2.86h45.46l-8.68,8.56,2.04,2.02L2300,3801Z" transform="translate(-2249 -3789)"></path>
                   </svg>
               </span>
@@ -31,7 +31,7 @@ style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs
 </div>
 </section>
 <section class="pt-5 pb-5">
-<div class="container">
+<div class="container px-4 py-5">
   <div class="row align-items-center justify-content-center">
     <div class="col-12 col-md-4 offset-md-1">
       <h3 class="text-primary small">IT-løsninger med passion</h3>
@@ -50,7 +50,7 @@ style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs
     </div>
     <div class="col-12 col-md-6   mt-4 mt-md-0">
       <img alt="image" class="img-fluid"
-        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+        src="{% static 'img/meeting_background-min.jpg' %}">
     </div>
   </div>
 </div>
@@ -63,72 +63,65 @@ style="min-height: 65vh; background-size: cover; background-color: rgba(var(--bs
       <h2 class=" ">Vi levere det meste</h2>
       <p class="lead">
           Hos Xperta har vi et indgående kendskab til open source-teknologistakken. <br/>
-          Vi har implementeret en lang række infrastruktur løsninger for vores kunder, såsom: reverse-proxyer, kubernetes clusters, lokale CA løsninger, monitorering, osv. <br/>
+          Vi har implementeret en lang række it-løsninger for vores kunder, såsom: reverse-proxyer, kubernetes clusters, lokale CA løsninger, monitorering, osv. <br/>
           Vores team har stor erfaring fra forskellige brancher med at udvikle skræddersyede it-løsninger, til alt fra små virksomheder, til store koncerner.
       </p>
     </div>
   </div>
   <div class="row d-flex mb-5">
-    <div class="col-10 mx-auto col-md-4">
-      <div class="my-3 card card-body shadow p-4 h-100">
+    <div class="col-10 mx-auto col-md-4 d-flex">
+      <div class="my-3 card card-body shadow p-4">
+          <div class="icon-wrap text-primary my-3 text-center">
+            <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-lock fa-lg"></i>
+          </div>
+          <div class="row align-items-center d-flex text-md-center text-lg-start">
+              <h4 class="text-center mx-auto">
+                Sikkerhed først!
+              </h4>
+              <p class="text-center mx-auto">
+                Hos Xperta er vi pasionerede omkring sikkerhed, og vil derfor gerne hjælpe med at holde dine data sikre! 
+                </br>Både hos jer selv, eller i vores hostedede løsninger.
+              </p>
+          </div>
+      </div>
+    </div>
+    <div class="col-10 mx-auto col-md-4 d-flex">
+      <div class="my-3 card card-body shadow p-4">
+          <div class="icon-wrap text-primary my-3 text-center">
+            <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-mobile fa-lg"></i>
+          </div>
+          <div class="row align-items-center d-flex text-md-center text-lg-start">
+              <h4 class="text-center mx-auto">
+                Hosting / MSP
+              </h4>
+              <p class="text-center mx-auto">
+                Vores medarbejdere er sepcialister i at hoste it-løsninger for kunder.
+                </br>Vi hjælper også gerne jer så i slippe for besværet, og kan fokusere på forretningen.
+              </p>
+          </div>
+      </div>
+    </div>
+    <div class="col-10 mx-auto col-md-4 d-flex">
+      <div class="my-3 card card-body shadow p-4">
+        <div class="icon-wrap text-primary my-3 text-center">
+          <i class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fas fa-user-friends fa-lg"></i>
+        </div>
         <div class="row align-items-center d-flex text-md-center text-lg-start">
-          <div class="col-12 col-sm-3 col-md-3 text-center px-0">
-            <div class="icon-wrap text-primary my-3">
-              <i
-                class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-lock fa-lg"></i>
-            </div>
-          </div>
-          <div class="col-12 col-md-9 mt-3 mt-lg-0">
-            <h4 class="">
-              Sikkerhed først!
-            </h4>
-            <p class=" mb-0">
-              Hos Xperta er vi pasionerede omkring sikkerhed, og vil derfor gerne hjælpe med at holde dine data sikre! Både hos jer selv, eller i vores hostedede løsninger.
-            </p>
-          </div>
+          <h4 class="text-center mx-auto">
+            IT-konsulent ydelser
+          </h4>
+          <p class="text-center mx-auto">
+            Jeres forretningsbehov er vores top prioritet, og vi viger ikke tilbage for at tage risici eller prøve noget nyt, for at levere en mere innovativ og omkostningseffektivt løsning.
+          </p>
         </div>
       </div>
     </div>
-    <div class="col-10 mx-auto col-md-4">
-      <div class="my-3 card card-body shadow p-4 h-100">
-        <div class="row align-items-center text-md-center text-lg-start">
-          <div class="col-12 col-sm-3 col-md-3 text-center px-0">
-            <div class="icon-wrap text-primary my-3">
-              <i
-                class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-mobile fa-lg"></i>
-            </div>
-          </div>
-          <div class="col-12 col-md-9 mt-3 mt-lg-0">
-            <h4 class="">
-              Hosting / MSP
-            </h4>
-            <p class="  sm-font-size text-dark-gray mb-0">
-              Voeres medarbejdere er sepcialister i at hoste it-løsninger for kunder. Vi hjælper også gerne jer så i slippe for besværet, og kan fokusere på forretningen.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-10 mx-auto col-md-4">
-      <div class="my-3 card card-body shadow p-4 h-100">
-        <div class="row align-items-center text-md-center text-lg-start">
-          <div class="col-12 col-sm-3 col-md-3 text-center px-0">
-            <div class="icon-wrap text-primary my-3">
-              <i
-                class="icon p-4 border-primary bg-light text-primary md-font-size rounded-circle fa fa-tint fa-lg"></i>
-            </div>
-          </div>
-          <div class="col-12 col-md-9 mt-3 mt-lg-0">
-            <h4 class="">
-              IT-konsulent ydelser
-            </h4>
-            <p class="  mb-0">
-              Jeres forretningsbehov er vores top prioritet, og vi viger ikke tilbage for at tage risici eller prøve noget nyt, for at levere en mere innovativ og omkostningseffektivt løsning.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a class="btn btn-primary mx-auto d-flex" href="/services" target="_self" title="Læs mere">
+      <span>Læs mere<svg xmlns="http://www.w3.org/2000/svg" width="25.5" height="12" viewBox="0 0 51 24">
+              <path class="fill-color" fill-rule="evenodd" fill="#ffffff" d="M2287.81,3788.99l-2.04,2.02,8.68,8.56h-45.46v2.86h45.46l-8.68,8.56,2.04,2.02L2300,3801Z" transform="translate(-2249 -3789)"></path>
+          </svg>
+      </span>
+    </a>
   </div>
 </div>
 </section>
