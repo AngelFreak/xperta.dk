@@ -38,6 +38,17 @@ Secoundary:
 .navbar.scrolled li a {
 	color: #0e1214;
 }
+.navbar-phone {
+	font-weight: 600;
+	font-size: 12px;
+	color: #a29991;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: block;
+	position: relative;
+	z-index: 5;
+	text-decoration: none;
+}
 .navbar-brand img {
 	width: auto;
 	height: auto;
